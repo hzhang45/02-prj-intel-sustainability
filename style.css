@@ -1,3 +1,7 @@
+body {
+  margin: 0;
+}
+
 /* Header Section - Center all content */
 header {
   text-align: center;
