@@ -141,8 +141,8 @@ section p {
   position: absolute;
   left: 0;
   right: 0;
-  /* place the note safely above the scrollbar */
-  bottom: 60px;
+  /* position 35px below the scrollbar */
+  bottom: -35px;
   text-align: center;
   font-family: 'Open Sans', sans-serif;
   color: #10375c;
