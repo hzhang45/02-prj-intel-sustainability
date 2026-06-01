@@ -87,6 +87,8 @@ section {
 }
 
 section > div {
+  position: relative;
+  overflow: hidden;
   flex: 0 0 320px;
   min-width: 320px;
   background: #ffffff;
@@ -109,6 +111,31 @@ section > div {
   object-fit: cover;
   border-radius: 12px;
   margin: 0 0 18px;
+}
+
+/* Card details overlay */
+section > div > p {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 35, 82, 0.92);
+  color: #ffffff;
+  padding: 24px;
+  margin: 0;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 240ms ease, transform 240ms ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  line-height: 1.6;
+  z-index: 2;
+}
+
+section > div:hover > p,
+section > div:focus-within > p {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /* Hover / focus effect for each card: lift, stronger shadow, slight scale */
@@ -158,6 +185,8 @@ section p {
   text-align: center;
   font-family: 'Open Sans', sans-serif;
   color: #10375c;
+  background-color: #eef2f4;
+  padding: 8px 0;
   margin: 0;
   pointer-events: none;
 }
