@@ -32,6 +32,14 @@ header h1 {
   margin: 0;
 }
 
+/* Add a subtle rule between the heading and description */
+header hr {
+  width: 80px;
+  border: 0;
+  border-top: 2px solid #005f73;
+  margin: 20px auto 0;
+}
+
 /* Style the description paragraph */
 header p {
   font-size: 18px;
