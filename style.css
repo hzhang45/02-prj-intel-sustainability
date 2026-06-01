@@ -7,7 +7,8 @@ html, body {
 header {
   text-align: center;
   padding: 40px 20px;
-  background-color: #0071C5;
+  /* subtle diagonal gradient from top-left to bottom-right */
+  background: linear-gradient(135deg, #0071C5 0%, #005ea8 100%);
   color: white;
   font-family: 'Open Sans', sans-serif;
 }
@@ -80,6 +81,9 @@ section {
 /* wrapper to position the timeline note above the section scrollbar */
 .timeline-wrapper {
   position: relative;
+  background-color: #f7f8f9;
+  padding-top: 8px;
+  padding-bottom: 8px;
 }
 
 section > div {
