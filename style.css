@@ -1,1 +1,35 @@
-/* Add your CSS here */
+/* Header Section - Center all content */
+header {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: #0071C5;
+  color: white;
+  font-family: 'Open Sans', sans-serif;
+}
+
+/* Center the header container */
+header div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Resize the header logo */
+header img {
+  width: 120px;
+  height: auto;
+}
+
+/* Style the main heading */
+header h1 {
+  font-size: 48px;
+  margin: 0;
+}
+
+/* Style the description paragraph */
+header p {
+  font-size: 18px;
+  margin: 0;
+  max-width: 600px;
+}
