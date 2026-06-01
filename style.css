@@ -69,6 +69,19 @@ section::-webkit-scrollbar-track {
   background: rgba(0, 0, 0, 0.05);
 }
 
+section {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  padding: 24px 20px 40px;
+  scroll-snap-type: x mandatory;
+}
+
+/* wrapper to position the timeline note above the section scrollbar */
+.timeline-wrapper {
+  position: relative;
+}
+
 section > div {
   flex: 0 0 320px;
   min-width: 320px;
@@ -77,6 +90,16 @@ section > div {
   padding: 24px;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
   scroll-snap-align: start;
+  transition: transform 240ms ease, box-shadow 240ms ease;
+  will-change: transform, box-shadow;
+  font-family: 'Open Sans', sans-serif;
+}
+
+/* Hover / focus effect for each card: lift, stronger shadow, slight scale */
+section > div:hover,
+section > div:focus-within {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 24px 48px rgba(0, 0, 0, 0.18);
 }
 
 section h2 {
@@ -107,4 +130,17 @@ section p {
     min-width: auto;
     width: 100%;
   }
+}
+
+/* Timeline note positioned above the horizontal scrollbar */
+.timeline-note {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 12px;
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+  color: #10375c;
+  margin: 0;
+  pointer-events: none;
 }
