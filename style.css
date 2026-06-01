@@ -51,7 +51,7 @@ header p {
 /* Timeline Cards Section */
 section {
   display: flex;
-  gap: 20px;
+  gap: 0;
   overflow-x: auto;
   padding: 24px 20px 40px;
   scroll-snap-type: x mandatory;
@@ -86,7 +86,7 @@ section {
   padding-bottom: 8px;
 }
 
-section > div {
+section > .card {
   flex: 0 0 320px;
   min-width: 320px;
   background: #ffffff;
@@ -100,10 +100,18 @@ section > div {
 }
 
 /* Hover / focus effect for each card: lift, stronger shadow, slight scale */
-section > div:hover,
-section > div:focus-within {
+section > .card:hover,
+section > .card:focus-within {
   transform: translateY(-10px) scale(1.02);
   box-shadow: 0 24px 48px rgba(0, 0, 0, 0.18);
+}
+
+/* invisible snap points between cards */
+.snap-point {
+  flex: 0 0 20px;
+  min-width: 20px;
+  scroll-snap-align: center;
+  pointer-events: none;
 }
 
 section h2 {
@@ -141,10 +149,20 @@ section p {
   position: absolute;
   left: 0;
   right: 0;
-  bottom: 12px;
+  /* place the note safely above the scrollbar */
+  bottom: 48px;
   text-align: center;
   font-family: 'Open Sans', sans-serif;
   color: #10375c;
   margin: 0;
   pointer-events: none;
+}
+
+@media (max-width: 768px) {
+  .timeline-note {
+    position: static;
+    margin: 12px 0 0;
+    bottom: auto;
+    pointer-events: auto;
+  }
 }
