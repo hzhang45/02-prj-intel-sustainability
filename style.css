@@ -3,6 +3,10 @@ html, body {
   padding: 0;
 }
 
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
 /* Header Section - Center all content */
 header {
   text-align: center;
@@ -172,6 +176,7 @@ section p {
   section > div {
     min-width: auto;
     width: 100%;
+    max-width: 100%;
   }
 }
 
