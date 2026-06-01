@@ -101,8 +101,11 @@ section > div {
 
 /* Card image styling */
 .card-image {
+  display: block;
   width: 100%;
-  height: 160px;
+  max-width: 100%;
+  height: 150px;
+  min-height: 150px;
   object-fit: cover;
   border-radius: 12px;
   margin: 0 0 18px;
